@@ -3,11 +3,9 @@ TEMPLATE = lib
 
 QT += core widgets sql gui network
 
-DEFINES +=VISUALIZATION_LIB
+#include(visualization.pri)
 
-include(visualization.pri)
-
-TARGET = visualization
+TARGET = server
 
 LIB_LIST =
 

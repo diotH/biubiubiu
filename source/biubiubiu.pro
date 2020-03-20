@@ -1,4 +1,7 @@
 TEMPLATE = subdirs
 CONFIG   += ordered
 
-SUBDIRS += visualization/visualization.pro
+SUBDIRS += communication/communication.pro \
+           visualization/visualization.pro \
+           server/server.pro \
+           startProcess/startProcess.pro \

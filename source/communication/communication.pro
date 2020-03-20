@@ -1,13 +1,13 @@
 
 TEMPLATE = lib
 
-QT += core widgets sql gui network
+QT += core network
 
-DEFINES +=VISUALIZATION_LIB
+DEFINES +=COMMUNICATION_LIB
 
 include(visualization.pri)
 
-TARGET = visualization
+TARGET = communication
 
 LIB_LIST =
 

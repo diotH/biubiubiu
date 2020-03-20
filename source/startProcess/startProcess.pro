@@ -1,13 +1,10 @@
 
-TEMPLATE = lib
+TEMPLATE = app
 
 QT += core widgets sql gui network
 
-DEFINES +=VISUALIZATION_LIB
-
-include(visualization.pri)
-
-TARGET = visualization
+#include(visualization.pri)
+TARGET = starProcess
 
 LIB_LIST =
 
