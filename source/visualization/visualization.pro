@@ -1,15 +1,22 @@
 
 TEMPLATE = lib
 
-QT += core widgets sql gui network
+QT += core widgets sql gui network xml
 
 DEFINES +=VISUALIZATION_LIB
 
 include(visualization.pri)
+include(../publicConfig/common.pri)
 
 TARGET = visualization
 
-LIB_LIST =
+DESTDIR = $$PROJECT_ROOT_DIR
+
+DEPENDPATH += $$PROJECT_ROOT_DIR
+
+LIBS += -L$$PROJECT_ROOT_DIR
+
+LIBS_LIST =
 
 #依赖的头文件路径
 INCLUDEPATH += ./include
@@ -30,3 +37,6 @@ CONFIG(debug, debug|release){
     LIBS += $$var
     }
 }
+
+RESOURCES += \
+    resource.qrc

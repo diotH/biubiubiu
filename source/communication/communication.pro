@@ -5,7 +5,7 @@ QT += core network
 
 DEFINES +=COMMUNICATION_LIB
 
-include(visualization.pri)
+#include(visualization.pri)
 
 TARGET = communication
 

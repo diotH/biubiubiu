@@ -3,13 +3,23 @@ TEMPLATE = app
 
 QT += core widgets sql gui network
 
-#include(visualization.pri)
+include(startProcess.pri)
+include(../publicConfig/common.pri)
+
 TARGET = starProcess
 
-LIB_LIST =
+DESTDIR = $$PROJECT_ROOT_DIR
+
+LIBS_LIST = visualization
+
+#依赖路径
+DEPENDPATH += $$PROJECT_ROOT_DIR
+#静态库文件夹路径
+LIBS += -L$$PROJECT_ROOT_DIR
 
 #依赖的头文件路径
 INCLUDEPATH += ./include
+INCLUDEPATH += ../visualization/include
 
 #配置debug和release的区别
 CONFIG(debug, debug|release){
