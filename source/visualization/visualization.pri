@@ -1,16 +1,20 @@
 
 HEADERS +=  \
-            include/visualizationImprot.h \
-            include/login/login.h \
-            include/setting/setting.h \
-            include/rank/rank.h \
-            include/game/gameBackground.h \
-            include/game/gameGraphicsView.h
+            $$PWD/include/game/bulletBase.h \
+            $$PWD/include/game/planeBase.h \
+            $$PWD/include/visualizationImprot.h \
+            $$PWD/include/login/login.h \
+            $$PWD/include/setting/setting.h \
+            $$PWD/include/rank/rank.h \
+            $$PWD/include/game/gameBackground.h \
+            $$PWD/include/game/gameGraphicsView.h
 
 SOURCES += \
-        src/login/login.cpp \
-        src/setting/setting.cpp \
-        src/rank/rank.cpp \
-        src/game/gameBackground.cpp \
-        src/game/gameGraphicsView.cpp
+        $$PWD/src/game/bulletBase.cpp \
+        $$PWD/src/game/planeBase.cpp \
+        $$PWD/src/login/login.cpp \
+        $$PWD/src/setting/setting.cpp \
+        $$PWD/src/rank/rank.cpp \
+        $$PWD/src/game/gameBackground.cpp \
+        $$PWD/src/game/gameGraphicsView.cpp
 

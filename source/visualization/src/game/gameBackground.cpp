@@ -18,29 +18,33 @@ CGameBackground::CGameBackground(QWidget *parent)
     background_3->setFixedSize(680,597);
     background_3->setPixmap(QPixmap("://Resource/map/forest-03.jpg"));
 
-    QPropertyAnimation *animation_1 = new QPropertyAnimation(background_1,"geometry",this);
+    animation_1 = new QPropertyAnimation(background_1,"geometry",this);
     animation_1->setDuration(5000);
     animation_1->setKeyValueAt(0,QRect(0,204,680,596));
     animation_1->setKeyValueAt(1,QRect(0,800,680,596));
 
-    QPropertyAnimation *animation_2 = new QPropertyAnimation(background_2,"geometry",this);
+    animation_2 = new QPropertyAnimation(background_2,"geometry",this);
     animation_2->setDuration(5000);
     animation_2->setKeyValueAt(0,QRect(0,-316,680,596));
     animation_2->setKeyValueAt(1,QRect(0,280,680,596));
 
-    QPropertyAnimation *animation_3 = new QPropertyAnimation(background_3,"geometry",this);
+    animation_3 = new QPropertyAnimation(background_3,"geometry",this);
     animation_3->setDuration(5000);
     animation_3->setKeyValueAt(0,QRect(0,-913,680,596));
     animation_3->setKeyValueAt(1,QRect(0,-316,680,596));
 
-//    connect(animation_1,SIGNAL(stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)),
-//            this,SLOT(stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)));
-    QParallelAnimationGroup *group = new QParallelAnimationGroup(this);
+    group = new QParallelAnimationGroup(this);
     group->addAnimation(animation_1);
     group->addAnimation(animation_2);
     group->addAnimation(animation_3);
     group->start();
     group->setLoopCount(-1);
+
+//    QTimer *timer =  new QTimer(this);
+//    //timer->setInterval(100);
+
+//    connect(timer,SIGNAL(timeout()),this,SLOT(timeoutSLot()));
+//    timer->start(1000);
 
     m_gameGraphicsView->raise();
 }
@@ -53,6 +57,12 @@ CGameBackground::~CGameBackground()
 void CGameBackground::stateChanged(QAbstractAnimation::State newState, QAbstractAnimation::State oldState)
 {
     qDebug()<<"new state"<<newState<<"old state"<<oldState;
+}
+
+void CGameBackground::timeoutSLot()
+{
+    //qDebug()<<"2222";
+    //qDebug()<<animation_1->currentValue().toRect();
 }
 
 void CGameBackground::createUI()

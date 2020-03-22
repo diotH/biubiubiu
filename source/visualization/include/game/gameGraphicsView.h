@@ -3,13 +3,16 @@
 
 #include "visualizationImprot.h"
 
+class CPlaneBase;
+
 class VISUALIZATION_EXPORT CGameGraphicsView : public QGraphicsView
 {
     Q_OBJECT
 public:
     CGameGraphicsView(QWidget *parent = nullptr);
     ~CGameGraphicsView();
-
+private:
+    CPlaneBase *m_myPlane;
 
 };
 

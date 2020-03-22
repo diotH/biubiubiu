@@ -3,5 +3,7 @@
         <file>Resource/map/forest-01.jpg</file>
         <file>Resource/map/forest-02.jpg</file>
         <file>Resource/map/forest-03.jpg</file>
+        <file>Resource/plane/myPlane_1.png</file>
+        <file>Resource/plane/myPlane_2.png</file>
     </qresource>
 </RCC>
